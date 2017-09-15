@@ -15,6 +15,11 @@ def login():
 @app.route("/register")
 def register():
 	return render_template("registrationdrm.html")
+	
+@app.route("/user")
+def user():
+	return render_template("userform.html")
+	
 class register(db.Model):
 	id=db.Column('student_id',db.Integer,primary_key=True)
 	name=db.Column(db.String)
